@@ -7,42 +7,59 @@ export const OthersProfileContext = createContext();
 const OthersProfileProvider = ({ children }) => {
   const initialState = {
     userProfiles: Data,
-    savedToFollowing : [] ,
+    savedToFollowing: [],
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const AddToFollowing = (x) => {
     // console.log(x);
-    dispatch({type : 'ADD_TO_FOLLOWING' , payload : {
-      pay1 : x ,
-    }})
+    dispatch({
+      type: "ADD_TO_FOLLOWING",
+      payload: {
+        pay1: x,
+      },
+    });
   };
 
   const [viewData, setViewData] = useState();
-  const viewProfile = (x) =>{
+  const viewProfile = (x) => {
     // console.log("i m clicked")
     // console.log(x)
     setViewData(x);
     // console.log(viewData);
-  }
+  };
 
   const deleteFollowing = (x) => {
     // console.log(x);
-    dispatch({ type : 'DELETE_FROM_FOLLOWING' , payload : {
-        pay1 : x ,
-    }})
-  }
+    dispatch({
+      type: "DELETE_FROM_FOLLOWING",
+      payload: {
+        pay1: x,
+      },
+    });
+  };
 
+  const filterByText = (t) => {
+    // console.log(t);
+    dispatch({
+      type: "FILTER_BY_SEARCH",
+      payload: {
+        pay1: initialState.userProfiles,
+        pay2: t,
+      },
+    });
+  };
 
   return (
     <OthersProfileContext.Provider
       value={{
         state: state,
         AddToFollowing: AddToFollowing,
-        viewProfile : viewProfile ,
-        viewData : viewData ,
-        deleteFollowing : deleteFollowing,
+        viewProfile: viewProfile,
+        viewData: viewData,
+        deleteFollowing: deleteFollowing,
+        filterByText: filterByText,
       }}
     >
       {children}

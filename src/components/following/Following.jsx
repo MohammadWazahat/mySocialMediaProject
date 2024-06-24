@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 import { OthersProfileContext } from "../../contexts/othersProfileContext";
 
 const Following = () => {
-  const { state, deleteFollowing ,viewProfile  } = useContext(OthersProfileContext);
+  const { state, deleteFollowing, viewProfile } =
+    useContext(OthersProfileContext);
   // console.log(state.savedToFollowing);
   const myFollowing = state.savedToFollowing;
 
