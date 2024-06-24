@@ -1,0 +1,9 @@
+.bdr{
+    border : 1px solid rgb(2, 2, 2);
+}
+
+button{
+    border : 1px solid black;
+    margin : 2px;
+    padding: 2px;
+}

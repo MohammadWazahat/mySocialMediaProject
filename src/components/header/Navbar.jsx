@@ -25,6 +25,16 @@ const Navbar = () => {
                       About
                     </NavLink>
                   </li>
+                  <li className="navlink">
+                    <NavLink to="/myProfile" className="clickLink">
+                      My Profile
+                    </NavLink>
+                  </li>
+                  <li className="navlink">
+                    <NavLink to="/mySavedPosts" className="clickLink">
+                      Saved Posts
+                    </NavLink>
+                  </li>
                 </ul>
               </div>
             </div>
