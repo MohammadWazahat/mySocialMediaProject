@@ -8,6 +8,8 @@ import MyProfile from "./myProfile/MyProfile";
 import MySavedPosts from "./savedPosts/MySavedPosts";
 import OtherUsersProfile from "./otherUsersProfiles/OtherUsersProfile";
 import Following from "./following/Following";
+import SingleUserProfile from "./otherUsersProfiles/SingleUserProfile";
+import ViewSingleProfile from "./otherUsersProfiles/ViewSingleProfile";
 
 const router = createBrowserRouter([
   {
@@ -65,7 +67,17 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
-        <Following/>
+        <Following />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/viewSingleProfile/:id",
+    element: (
+      <>
+        <Navbar />
+        <ViewSingleProfile/>
         <Footer />
       </>
     ),
