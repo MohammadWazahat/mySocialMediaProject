@@ -31,6 +31,11 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="navlink">
+                    <NavLink to="/searchUsers" className="clickLink">
+                      Search users
+                    </NavLink>
+                  </li>
+                  <li className="navlink">
                     <NavLink to="/mySavedPosts" className="clickLink">
                       Saved Posts
                     </NavLink>

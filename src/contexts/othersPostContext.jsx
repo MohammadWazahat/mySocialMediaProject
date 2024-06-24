@@ -14,7 +14,6 @@ const UserPostProvider = ({ children }) => {
   const initialState = {
     userPost : Data ,
     savedPosts : [] ,
-    a: 0,
   };
   const [state, dispatch] = useReducer(reducer, initialState);
 

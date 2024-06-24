@@ -1,16 +1,17 @@
-import './App.css'
-import AllComponents from './components/AllComponents'
-import UserPostProvider from './contexts/othersPostContext'
+import "./App.css";
+import AllComponents from "./components/AllComponents";
+import UserPostProvider from "./contexts/othersPostContext";
+import OthersProfileProvider from "./contexts/othersProfileContext";
 function App() {
- 
-
   return (
     <>
-    <UserPostProvider>
-     <AllComponents/>     
-     </UserPostProvider> 
+      <OthersProfileProvider>
+        <UserPostProvider>
+          <AllComponents />
+        </UserPostProvider>
+      </OthersProfileProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

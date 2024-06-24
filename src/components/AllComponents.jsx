@@ -6,6 +6,8 @@ import Navbar from "./header/Navbar";
 import Footer from "./footer/Footer";
 import MyProfile from "./myProfile/MyProfile";
 import MySavedPosts from "./savedPosts/MySavedPosts";
+import OtherUsersProfile from "./otherUsersProfiles/OtherUsersProfile";
+import Following from "./following/Following";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +35,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
-       <MyProfile/>
+        <MyProfile />
         <Footer />
       </>
     ),
@@ -43,7 +45,27 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
-       <MySavedPosts/>
+        <MySavedPosts />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/searchUsers",
+    element: (
+      <>
+        <Navbar />
+        <OtherUsersProfile />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/followings",
+    element: (
+      <>
+        <Navbar />
+        <Following/>
         <Footer />
       </>
     ),
