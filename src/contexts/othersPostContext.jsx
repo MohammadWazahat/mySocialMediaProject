@@ -25,11 +25,19 @@ const UserPostProvider = ({ children }) => {
     }})
   }
 
+  const deleteSavedPost = (x) => {
+    // console.log(x);
+    dispatch({ type : 'DELETE_MY_POST' , payload : {
+        pay1 : x ,
+    }})
+  }
+
   return (
     <OtherUserPostContext.Provider
       value={{
         state: state,
         saveMyPost : saveMyPost ,
+        deleteSavedPost : deleteSavedPost ,
       }}
     >
       {children}

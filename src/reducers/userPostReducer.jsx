@@ -1,16 +1,24 @@
 const userPostReducer = (state,action) => {
+    
     if(action.type === 'SAVE_MY_POST'){
-        const newAddedPost = {
-            profile_pic : action.payload.pay1.profile_pic ,
-            name : action.payload.pay1.name ,
-            username : action.payload.pay1.username ,
-            post_pic : action.payload.pay1.post_pic ,
-        }
+        // console.log(action.payload.pay1)
         return {
             ...state ,
-            savedPosts : [ ...state.savedPosts , newAddedPost ]
+            savedPosts : [ ...state.savedPosts , action.payload.pay1 ]
         }
     }
+
+    if (action.type === "DELETE_MY_POST") {
+        // console.log(action.payload)
+        const updatedSavedPosts = state.savedPosts.filter(
+          (item) => item.user_id !== action.payload.pay1
+        );
+        // console.log(updatedCart);
+        return {
+          ...state,
+          savedPosts : updatedSavedPosts ,
+        };
+      }
  return state ;
 }
 

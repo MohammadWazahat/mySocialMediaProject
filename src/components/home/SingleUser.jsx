@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { OtherUserPostContext } from "../../contexts/othersPostContext";
+import CommentPost from "./CommentPost";
 
 const SingleUser = (item) => {
   const {saveMyPost} = useContext(OtherUserPostContext);
@@ -19,6 +20,7 @@ const SingleUser = (item) => {
         </div>
         <div className="bdr "> three dots</div>
       </div>
+      <div className="bdr ">{item.post_text} </div>
       <div className="bdr ">
         <img className="bdr h-84 w-96 " src={item.post_pic[0]} alt="" />
       </div>
@@ -33,10 +35,12 @@ const SingleUser = (item) => {
         </div>
       </div>
       <div className="bdr ">
-        <div className="bdr ">no. of like</div>
-        <div className="bdr ">hashtags</div>
+      <div className="bdr ">{item.no_of_likes} likes </div>
+      <div className="bdr ">hashtags :{item.tags} </div>
       </div>
-      <div className="bdr ">comment column</div>
+      <div className="bdr ">comment column
+        <CommentPost/>
+      </div>
     </div>
   );
 };
