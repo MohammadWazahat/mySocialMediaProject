@@ -10,6 +10,8 @@ import OtherUsersProfile from "./otherUsersProfiles/OtherUsersProfile";
 import Following from "./following/Following";
 import SingleUserProfile from "./otherUsersProfiles/SingleUserProfile";
 import ViewSingleProfile from "./otherUsersProfiles/ViewSingleProfile";
+import CreatePost from "./myPost/createPost/CreatePost";
+import UpdatePost from "./myPost/createPost/UpdatePost";
 
 const router = createBrowserRouter([
   {
@@ -77,7 +79,27 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
-        <ViewSingleProfile/>
+        <ViewSingleProfile />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/createPostForm",
+    element: (
+      <>
+        <Navbar />
+        <CreatePost />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/updatePostForm/:id",
+    element: (
+      <>
+        <Navbar />
+        <UpdatePost/>
         <Footer />
       </>
     ),

@@ -19,7 +19,7 @@ const othersProfileReducer = (state, action) => {
 
   if (action.type === "FILTER_BY_SEARCH") {
     const filteredData = action.payload.pay1.filter((item) => {
-      return item.name.toLowerCase().includes(action.payload.pay2);
+      return item.name.toLowerCase().includes(action.payload.pay2.toLowerCase());
     });
     return {
       ...state,

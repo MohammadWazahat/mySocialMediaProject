@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { MyProfileContext } from "../../contexts/myProfileContext";
+import { NavLink } from "react-router-dom";
+import ReadPost from "../myPost/createPost/ReadPost";
 
 const MyProfile = () => {
+  const { state, createPost } = useContext(MyProfileContext);
+  // console.log(state)
   return (
     <div>
       <div className="bdr">username</div>
@@ -19,7 +24,14 @@ const MyProfile = () => {
       <hr />
       <div className="bdr">
         <button className="bdr">my post</button>
-        <button className="bdr">create post</button>
+        <NavLink to="/createPostForm" className="bdr">
+          <button className="bdr" onClick={() => createPost()}>
+            create post
+          </button>
+        </NavLink>
+      </div>
+      <div>
+        <ReadPost/>
       </div>
     </div>
   );

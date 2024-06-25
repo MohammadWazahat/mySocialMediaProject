@@ -1,15 +1,18 @@
 import "./App.css";
 import AllComponents from "./components/AllComponents";
+import MyProfileProvider from "./contexts/myProfileContext";
 import UserPostProvider from "./contexts/othersPostContext";
 import OthersProfileProvider from "./contexts/othersProfileContext";
 function App() {
   return (
     <>
-      <OthersProfileProvider>
-        <UserPostProvider>
-          <AllComponents />
-        </UserPostProvider>
-      </OthersProfileProvider>
+      <MyProfileProvider>
+        <OthersProfileProvider>
+          <UserPostProvider>
+            <AllComponents />
+          </UserPostProvider>
+        </OthersProfileProvider>
+      </MyProfileProvider>
     </>
   );
 }

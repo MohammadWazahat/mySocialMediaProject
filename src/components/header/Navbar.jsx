@@ -10,8 +10,8 @@ const Navbar = () => {
           <header>
             <div className="flex flex-col m-4 p-4 justify-around items-center ">
               <div className=" m-4 text-4xl font-bold">
-                <span className="alphaColor">E</span>-COM
-                <span className="alphaColor"> W</span>ORLD
+                <span className="alphaColor">J</span>INGLE
+                <span className="alphaColor"> R</span>OOM
               </div>
               <div className=" flex m-4 text-xl">
                 <ul className="flex flex-col  gap-6">
