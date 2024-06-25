@@ -7,7 +7,7 @@ const Following = () => {
     useContext(OthersProfileContext);
   // console.log(state.savedToFollowing);
   const myFollowing = state.savedToFollowing;
-
+console.log(myFollowing.length)
   return (
     <div>
       <div>List of Following</div>

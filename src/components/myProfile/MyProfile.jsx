@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import { MyProfileContext } from "../../contexts/myProfileContext";
 import { NavLink } from "react-router-dom";
 import ReadPost from "../myPost/createPost/ReadPost";
+import { OthersProfileContext } from "../../contexts/othersProfileContext";
 
 const MyProfile = () => {
-  const { state, createPost } = useContext(MyProfileContext);
+  const { state, createPost, myUser } = useContext(MyProfileContext);
+ const {noOfFollowing } = useContext(OthersProfileContext)
+  // console.log(myUser.length);
   // console.log(state)
   return (
     <div>
@@ -12,9 +15,9 @@ const MyProfile = () => {
       <div className="bdr flex gap-4">
         <div className="bdr ">profile pic</div>
         <div className="bdr flex gap-4">
-          <div className="bdr">no of post : 10 </div>
+          <div className="bdr">no of post :{myUser.length}</div>
           <div className="bdr">follower : 1001 </div>
-          <div className="bdr">following : 101 </div>
+          <div className="bdr">following : {noOfFollowing} </div>
         </div>
       </div>
       <div className="bdr">
@@ -31,7 +34,7 @@ const MyProfile = () => {
         </NavLink>
       </div>
       <div>
-        <ReadPost/>
+        <ReadPost />
       </div>
     </div>
   );

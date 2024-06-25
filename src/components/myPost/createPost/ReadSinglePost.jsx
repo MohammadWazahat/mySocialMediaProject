@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 const ReadSinglePost = (user) => {
-//   console.log(user);
+  //   console.log(user);
   const handleDelete = (id) => {
     // window.confirm ask for confirmation of deletion
     const confirm = window.confirm("would you like to delete the user");

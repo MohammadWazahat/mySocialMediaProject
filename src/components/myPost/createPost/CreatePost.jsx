@@ -19,7 +19,7 @@ const CreatePost = () => {
         .then((res) => {
         //   console.log(res);
           // hook to navigate back to the page
-          navigate("/createPostForm");
+          navigate("/myProfile");
         })
         .catch((err) => console.log(err));
     };

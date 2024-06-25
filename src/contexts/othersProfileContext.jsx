@@ -51,6 +51,8 @@ const OthersProfileProvider = ({ children }) => {
     });
   };
 
+  const noOfFollowing = state.savedToFollowing.length ;
+console.log(noOfFollowing)
   return (
     <OthersProfileContext.Provider
       value={{
@@ -60,6 +62,7 @@ const OthersProfileProvider = ({ children }) => {
         viewData: viewData,
         deleteFollowing: deleteFollowing,
         filterByText: filterByText,
+        noOfFollowing : noOfFollowing ,
       }}
     >
       {children}
